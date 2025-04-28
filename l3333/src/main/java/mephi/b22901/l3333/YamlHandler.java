@@ -31,7 +31,6 @@ public class YamlHandler extends BaseHandler {
         try {
             File file = new File(fileName);
             
-            // Безопасное чтение с явным указанием типов
             Map<String, List<Map<String, Object>>> root = mapper.readValue(
                 file,
                 new TypeReference<Map<String, List<Map<String, Object>>>>() {}

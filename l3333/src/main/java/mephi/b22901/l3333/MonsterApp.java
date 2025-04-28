@@ -44,11 +44,9 @@ public class MonsterApp extends JFrame {
         });
     }
 
-    // Новый метод для загрузки файлов из директории проекта
     private void loadFilesFromProjectDir() {
         File projectDir = new File(System.getProperty("user.dir"));
 
-        // Фильтр для файлов, которые мы хотим загружать
         FileFilter monsterFilesFilter = file -> {
             String name = file.getName().toLowerCase();
             return (name.endsWith(".json") || 
@@ -87,7 +85,6 @@ public class MonsterApp extends JFrame {
         }
     }
 
-    // Модифицированный метод loadFiles() для сохранения текущей директории
     private void loadFiles() {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
@@ -129,28 +126,24 @@ public class MonsterApp extends JFrame {
         setSize(800, 600);
         setLayout(new BorderLayout());
 
-        // Панель с деревом
         JPanel treePanel = new JPanel(new BorderLayout());
         treePanel.setBackground(new Color(211, 211, 211));
         monsterTree = new JTree(new DefaultMutableTreeNode("Чудовища"));
         JScrollPane treeScroll = new JScrollPane(monsterTree);
         treePanel.add(treeScroll, BorderLayout.CENTER);
         
-        // Кнопка загрузки файлов
         JButton loadButton = new JButton("Загрузить файлы");
         loadButton.addActionListener(e -> loadFiles());
         treePanel.add(loadButton, BorderLayout.SOUTH);
         
         add(treePanel, BorderLayout.WEST);
 
-        // Панель деталей
         detailPanel = new JPanel(new BorderLayout());
 
         JPanel infoPanel = new JPanel(new GridLayout(0, 2, 5, 5));
         JScrollPane infoScroll = new JScrollPane(infoPanel);
         detailPanel.add(infoScroll, BorderLayout.CENTER);
 
-        // Панель редактирования
         JPanel editPanel = new JPanel(new BorderLayout());
 
         editPanel.add(new JLabel("Редактировать описание:"), BorderLayout.NORTH);
@@ -166,7 +159,6 @@ public class MonsterApp extends JFrame {
 
         detailPanel.add(editPanel, BorderLayout.SOUTH);
 
-        // Кнопка экспорта
         exportButton = new JButton("Экспортировать все");
         exportButton.setEnabled(false);
         detailPanel.add(exportButton, BorderLayout.NORTH);
@@ -179,7 +171,6 @@ public class MonsterApp extends JFrame {
         monsterTree.addTreeSelectionListener(e -> {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) monsterTree.getLastSelectedPathComponent();
 
-            // Активируем кнопку экспорта только если выбран узел формата (JSON, XML, YAML)
             exportButton.setEnabled(node != null && !node.isRoot() && 
                 node.getParent() != null && node.getParent().equals(monsterTree.getModel().getRoot()));
 
@@ -188,13 +179,11 @@ public class MonsterApp extends JFrame {
                 return;
             }
 
-            // Если выбрана нода формата (JSON, XML, YAML)
             if (node.getParent() != null && node.getParent().equals(monsterTree.getModel().getRoot())) {
                 clearDetailPanel();
                 return;
             }
 
-            // Находим выбранное чудовище в конкретном хранилище
             String monsterName = node.toString();
             DefaultMutableTreeNode storageNode = (DefaultMutableTreeNode) node.getParent();
             String storageType = storageNode.toString();
@@ -216,7 +205,6 @@ public class MonsterApp extends JFrame {
             }
         });
 
-        // Остальные слушатели остаются без изменений
         saveButton.addActionListener(e -> {
             if (selectedMonster != null) {
                 selectedMonster.setDescription(editField.getText());
@@ -253,14 +241,12 @@ public class MonsterApp extends JFrame {
 
         monsterTree.setModel(new DefaultTreeModel(root));
 
-        // Разворачиваем все узлы для удобства просмотра
         for (int i = 0; i < monsterTree.getRowCount(); i++) {
             monsterTree.expandRow(i);
         }
     }
     
     private void exportData() {
-        // Проверяем, что выбран конкретный формат (не корень и не монстр)
         DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) monsterTree.getLastSelectedPathComponent();
 
         if (selectedNode == null || selectedNode.isRoot() || 
@@ -274,7 +260,6 @@ public class MonsterApp extends JFrame {
         String storageType = selectedNode.toString();
         MonsterStorage selectedStorage = null;
 
-        // Находим хранилище выбранного типа
         for (MonsterStorage storage : storages) {
             if (storage.getSourceType().equals(storageType)) {
                 selectedStorage = storage;
@@ -293,12 +278,10 @@ public class MonsterApp extends JFrame {
         fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
         fileChooser.setDialogTitle("Экспорт " + storageType);
 
-        // Устанавливаем фильтр по умолчанию в соответствии с выбранным форматом
         String defaultExtension = storageType.toLowerCase();
         fileChooser.setFileFilter(new FileNameExtensionFilter(
             defaultExtension.toUpperCase() + " files", defaultExtension));
 
-        // Разрешаем выбор других форматов
         if (!defaultExtension.equals("json")) {
             fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("JSON files", "json"));
         }
@@ -347,7 +330,6 @@ public class MonsterApp extends JFrame {
         JPanel infoPanel = (JPanel) ((JScrollPane) detailPanel.getComponent(0)).getViewport().getView();
         infoPanel.removeAll();
 
-        // Добавляем информацию о формате
         infoPanel.add(new JLabel("Формат:"));
         infoPanel.add(new JLabel(getCurrentStorageType()));
 

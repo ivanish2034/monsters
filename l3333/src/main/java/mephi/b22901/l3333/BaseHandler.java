@@ -20,7 +20,6 @@ public abstract class BaseHandler implements Handler {
     }
 
     protected boolean passToNext(String fileName, MonsterStorage storage) {
-//        return nextHandler != null && nextHandler.handleRequest(fileName, storage);
         if (nextHandler != null) {
             return nextHandler.handleRequest(fileName, storage);
         }
@@ -28,7 +27,6 @@ public abstract class BaseHandler implements Handler {
     }
 
     protected boolean passExportToNext(String fileName, List<Monster> monsters) {
-//        return nextHandler != null && nextHandler.export(fileName, monsters);
         if (nextHandler != null) {
             return nextHandler.export(fileName, monsters);
         }

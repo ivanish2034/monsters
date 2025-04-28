@@ -32,7 +32,6 @@ public class XmlHandler extends BaseHandler {
         try {
             File file = new File(fileName);
             
-            // Для обработки как списка монстров
             List<Monster> monsters = mapper.readValue(
                 file,
                 mapper.getTypeFactory().constructCollectionType(List.class, Monster.class)
@@ -55,7 +54,6 @@ public class XmlHandler extends BaseHandler {
         }
 
         try {
-            // Добавляем корневой элемент "monsters" для XML
             Map<String, Object> root = Map.of("monsters", monsters);
             mapper.writeValue(new File(fileName), root);
             return true;
