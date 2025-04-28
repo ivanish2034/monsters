@@ -1,0 +1,262 @@
+<monsters>
+  <monster>
+    <name>Леший</name>
+    <description>Гибрид человека и лесного духа, охраняющий древние рощи.</description>
+    <dangerLevel>7</dangerLevel>
+    <habitat>чащи Брокилона и Эдингеля</habitat>
+    <firstMention>1234-06-21</firstMention>
+    <immunities>
+      <immunity>магия</immunity>
+      <immunity>оглушение</immunity>
+      <immunity>яды</immunity>
+    </immunities>
+    <vulnerability/>
+    <activityTime>ночью</activityTime>
+    <size>3 м</size>
+    <weight>300 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>корень мандрагоры (3)</ingredient>
+        <ingredient>пепел драконида (1)</ingredient>
+        <ingredient>эссенция полыни</ingredient>
+      </ingredients>
+      <timeMinutes>60</timeMinutes>
+      <effectiveness>умеренная</effectiveness>
+    </recipe>
+    <source>Bestiarum.txt</source>
+  </monster>
+
+  <monster>
+    <name>Полуденница</name>
+    <description>Призрак, терроризирующий поля во время жатвы.</description>
+    <dangerLevel>5</dangerLevel>
+    <habitat>поля Редании и амбары Туссента</habitat>
+    <firstMention>1198-07-15</firstMention>
+    <immunities>
+      <immunity>кровотечение</immunity>
+    </immunities>
+    <vulnerability>световая магия</vulnerability>
+    <activityTime>днём</activityTime>
+    <size/>
+    <weight>неосязаем</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>лепестки лунного цветка (2)</ingredient>
+        <ingredient>серебряная нить (1)</ingredient>
+        <ingredient>экстракт чеснока</ingredient>
+      </ingredients>
+      <timeMinutes>30</timeMinutes>
+      <effectiveness>высокая</effectiveness>
+    </recipe>
+    <source>Bestiarum.txt</source>
+  </monster>
+
+  <monster>
+    <name>Катакан</name>
+    <description>Крылатый демон с хвостом скорпиона.</description>
+    <dangerLevel>9</dangerLevel>
+    <habitat>горные пещеры Туссента</habitat>
+    <firstMention>1150-04-12</firstMention>
+    <immunities>
+      <immunity>огонь</immunity>
+      <immunity>яды</immunity>
+    </immunities>
+    <vulnerability/>
+    <activityTime>сумерки</activityTime>
+    <size>2 м</size>
+    <weight>200 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>жало мантикоры (4)</ingredient>
+        <ingredient>нефритовая пыль (2)</ingredient>
+        <ingredient>спирт Альберихта</ingredient>
+      </ingredients>
+      <timeMinutes>90</timeMinutes>
+      <effectiveness>критическая</effectiveness>
+    </recipe>
+    <source>Bestiarum.txt</source>
+  </monster>
+
+  <monster>
+    <name>Кикимора</name>
+    <description>Болотная нежить из гниющих останков.</description>
+    <dangerLevel>6</dangerLevel>
+    <habitat>топи Вендена</habitat>
+    <firstMention>1221-09-03</firstMention>
+    <immunities>
+      <immunity>удушье</immunity>
+    </immunities>
+    <vulnerability>земляная магия</vulnerability>
+    <activityTime>ночью</activityTime>
+    <size>1 м</size>
+    <weight>15 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>грибы-поганки (5)</ingredient>
+        <ingredient>глаз василиска (1)</ingredient>
+        <ingredient>роса папоротника (3)</ingredient>
+      </ingredients>
+      <timeMinutes>45</timeMinutes>
+      <effectiveness>средняя</effectiveness>
+    </recipe>
+    <source>Bestiarum.txt</source>
+  </monster>
+    <monster>
+        <name>Элементаль льда</name>
+        <description>Дух вечной зимы.</description>
+        <dangerLevel>10</dangerLevel>
+        <habitat>ледники Ковира</habitat>
+        <firstMention>1105-12-01</firstMention>
+        <immunities>
+            <immunity>заморозка</immunity>
+            <immunity>дробление</immunity>
+        </immunities>
+        <vulnerability/>
+        <activityTime>всегда</activityTime>
+        <size>5 м</size>
+        <weight>не измерим</weight>
+        <recipe>
+            <ingredients>
+                <ingredient>сердце огненного элементаля (1)</ingredient>
+                <ingredient>сера (3)</ingredient>
+                <ingredient>расплавленное железо</ingredient>
+            </ingredients>
+            <timeMinutes>120</timeMinutes>
+            <effectiveness>переменная</effectiveness>
+        </recipe>
+        <source>Bestiarum.txt</source>
+    </monster>
+  <monster>
+    <name>Сумасшедший дед-преподаватель</name>
+    <description>Бывший гениальный учёный, окончательно потерявший связь с реальностью после десятилетий преподавания.</description>
+    <dangerLevel>7</dangerLevel>
+    <habitat>аудитория №404, кафедра "Мифических наук", университет Мифи</habitat>
+    <firstMention>2025-02-30</firstMention>
+    <immunities>
+      <immunity>жалобы студентов</immunity>
+      <immunity>угрозы деканата</immunity>
+      <immunity>замечания о дресс-коде</immunity>
+    </immunities>
+    <vulnerability>разговоры о пенсии, вопросы про диссертацию</vulnerability>
+    <activityTime>полдень</activityTime>
+    <size>1.75 м</size>
+    <weight>70 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>кофе (3 чашки)</ingredient>
+        <ingredient>конспект 1980 года (1 шт.)</ingredient>
+        <ingredient>сломанный мелок (1/2)</ingredient>
+      </ingredients>
+      <timeMinutes>15</timeMinutes>
+      <effectiveness>высокая</effectiveness>
+    </recipe>
+    <source>Студенческий фольклор v3.14</source>
+  </monster>
+
+  <monster>
+    <name>Древний Байден</name>
+    <description>Артефактный политический деятель, поддерживаемый медиа-ритуалами. Известен спутанностью речи.</description>
+    <dangerLevel>4</dangerLevel>
+    <habitat>Белый Дом, особенно кухня и коридоры</habitat>
+    <firstMention>2020-11-03</firstMention>
+    <immunities>
+      <immunity>фактчекинг</immunity>
+      <immunity>логика</immunity>
+      <immunity>возрастные ограничения</immunity>
+    </immunities>
+    <vulnerability>прямые вопросы без суфлёра, лестницы, время после 18:00</vulnerability>
+    <activityTime>10:00-12:00</activityTime>
+    <size>1.82 м</size>
+    <weight>80 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>пыльная Конституция (1 шт.)</ingredient>
+        <ingredient>камера с автосуфлёром (2 шт.)</ingredient>
+        <ingredient>апельсиновый сок (3 мл)</ingredient>
+      </ingredients>
+      <timeMinutes>2880</timeMinutes>
+      <effectiveness>нестабильная</effectiveness>
+    </recipe>
+    <source>Политические архивы v46.7</source>
+  </monster>
+
+  <monster>
+    <name>Ельцин-Медведь</name>
+    <description>Полумифический правитель эпохи перемен, способный трансформироваться после 18:00. Абсолютная устойчивость к алкоголю.</description>
+    <dangerLevel>8</dangerLevel>
+    <habitat>Кремль, правительственная дача</habitat>
+    <firstMention>1991-12-31</firstMention>
+    <immunities>
+      <immunity>алкоголь</immunity>
+      <immunity>критика Запада</immunity>
+      <immunity>импичмент</immunity>
+    </immunities>
+    <vulnerability>народные протесты, экономические кризисы</vulnerability>
+    <activityTime>после 18:00</activityTime>
+    <size>1.88 м</size>
+    <weight>110 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>водка (1 литр)</ingredient>
+        <ingredient>конституция 1993 года (1 экз.)</ingredient>
+        <ingredient>танцевальный коврик</ingredient>
+      </ingredients>
+      <timeMinutes>90</timeMinutes>
+      <effectiveness>непредсказуемая</effectiveness>
+    </recipe>
+    <source>Архивы эпохи лихих 90-х v9.9</source>
+  </monster>
+
+  <monster>
+    <name>Зе-Трансформер</name>
+    <description>Политический хамелеон, способный менять амплуа от комика до военного лидера. Черпает силу из народной поддержки.</description>
+    <dangerLevel>7</dangerLevel>
+    <habitat>Офис президента, студии телеграм-каналов</habitat>
+    <firstMention>2019-04-21</firstMention>
+    <immunities>
+      <immunity>троллинг</immunity>
+      <immunity>фейки</immunity>
+      <immunity>популистские лозунги</immunity>
+    </immunities>
+    <vulnerability>невыполненные обещания</vulnerability>
+    <activityTime>круглосуточно</activityTime>
+    <size>1.70 м</size>
+    <weight>70 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>скриншоты из "Слуги народа" (10 шт)</ingredient>
+        <ingredient>зеленый свитер (1 шт)</ingredient>
+        <ingredient>военная форма (по ситуации)</ingredient>
+      </ingredients>
+      <timeMinutes>20</timeMinutes>
+      <effectiveness>адаптивная</effectiveness>
+    </recipe>
+    <source>Политические мемы UA 2.0</source>
+  </monster>
+
+  <monster>
+    <name>Панин-Кинолог</name>
+    <description>Контроверсийный артист, известный эксцентричными методами вживания в роли и нестандартными подходами к дрессуре.</description>
+    <dangerLevel>3</dangerLevel>
+    <habitat>Киностудии, скандальные ток-шоу</habitat>
+    <firstMention>2003-05-17</firstMention>
+    <immunities>
+      <immunity>общественное порицание</immunity>
+      <immunity>критика коллег</immunity>
+    </immunities>
+    <vulnerability>судебные иски</vulnerability>
+    <activityTime>после заката</activityTime>
+    <size>1.78 м</size>
+    <weight>75 кг</weight>
+    <recipe>
+      <ingredients>
+        <ingredient>спорный сценарий (1 экз.)</ingredient>
+        <ingredient>кинологический справочник (1 шт)</ingredient>
+        <ingredient>желание эпатировать</ingredient>
+      </ingredients>
+      <timeMinutes>666</timeMinutes>
+      <effectiveness>скандальная</effectiveness>
+    </recipe>
+    <source>Андеграунд-хроники Рунета</source>
+  </monster>
+</monsters>

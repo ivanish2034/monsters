@@ -1,0 +1,213 @@
+monsters:
+  - name: "Леший"
+    description: "Гибрид человека и лесного духа, охраняющий древние рощи."
+    dangerLevel: 7
+    habitat: "чащи Брокилона и Эдингеля"
+    firstMention: "1234-06-21"
+    immunities:
+      - "магия"
+      - "оглушение"
+      - "яды"
+    vulnerability: null
+    activityTime: "ночью"
+    size: "3 м"
+    weight: "300 кг"
+    recipe:
+      ingredients:
+        - "корень мандрагоры (3)"
+        - "пепел драконида (1)"
+        - "эссенция полыни"
+      timeMinutes: 60
+      effectiveness: "умеренная"
+    source: "Bestiarum.txt"
+
+  - name: "Полуденница"
+    description: "Призрак, терроризирующий поля во время жатвы."
+    dangerLevel: 5
+    habitat: "поля Редании и амбары Туссента"
+    firstMention: "1198-07-15"
+    immunities:
+      - "кровотечение"
+    vulnerability: "световая магия"
+    activityTime: "днём"
+    size: null
+    weight: "неосязаем"
+    recipe:
+      ingredients:
+        - "лепестки лунного цветка (2)"
+        - "серебряная нить (1)"
+        - "экстракт чеснока"
+      timeMinutes: 30
+      effectiveness: "высокая"
+    source: "Bestiarum.txt"
+
+  - name: "Катакан"
+    description: "Крылатый демон с хвостом скорпиона."
+    dangerLevel: 9
+    habitat: "горные пещеры Туссента"
+    firstMention: "1150-04-12"
+    immunities:
+      - "огонь"
+      - "яды"
+    vulnerability: null
+    activityTime: "в сумерках"
+    size: "2 м"
+    weight: "200 кг"
+    recipe:
+      ingredients:
+        - "жало мантикоры (4)"
+        - "нефритовая пыль (2)"
+        - "спирт Альберихта"
+      timeMinutes: 90
+      effectiveness: "критическая"
+    source: "Bestiarum.txt"
+
+  - name: "Кикимора"
+    description: "Болотная нежить из гниющих останков."
+    dangerLevel: 6
+    habitat: "топи Вендена"
+    firstMention: "1221-09-03"
+    immunities:
+      - "удушье"
+    vulnerability: "земляная магия"
+    activityTime: "ночью"
+    size: "1 м"
+    weight: "15 кг"
+    recipe:
+      ingredients:
+        - "грибы-поганки (5)"
+        - "глаз василиска (1)"
+        - "роса папоротника (3)"
+      timeMinutes: 45
+      effectiveness: "средняя"
+    source: "Bestiarum.txt"
+
+  - name: "Элементаль льда"
+    description: "Дух вечной зимы."
+    dangerLevel: 10
+    habitat: "ледники Ковира"
+    firstMention: "1105-12-01"
+    immunities:
+      - "заморозка"
+      - "дробление"
+    vulnerability: null
+    activityTime: "всегда"
+    size: "5 м"
+    weight: "не измерим"
+    recipe:
+      ingredients:
+        - "сердце огненного элементаля (1)"
+        - "сера (3)"
+        - "расплавленное железо"
+      timeMinutes: 120
+      effectiveness: "переменная"
+    source: "Bestiarum.txt"
+
+  - name: "Сумасшедший дед-преподаватель"
+    description: "Бывший гениальный учёный, окончательно потерявший связь с реальностью после десятилетий преподавания."
+    dangerLevel: 7
+    habitat: "аудитория №404, кафедра \"Мифических наук\", университет Мифи"
+    firstMention: "2025-02-30"
+    immunities:
+      - "жалобы студентов"
+      - "угрозы деканата"
+      - "замечания о дресс-коде"
+    vulnerability: "разговоры о пенсии, вопросы про диссертацию"
+    activityTime: "полдень"
+    size: "1.75 м"
+    weight: "70 кг"
+    recipe:
+      ingredients:
+        - "кофе (3 чашки)"
+        - "конспект 1980 года (1 шт.)"
+        - "сломанный мелок (1/2)"
+      timeMinutes: 15
+      effectiveness: "высокая"
+    source: "Студенческий фольклор v3.14"
+
+  - name: "Древний Байден"
+    description: "Артефактный политический деятель, поддерживаемый медиа-ритуалами. Известен спутанностью речи."
+    dangerLevel: 4
+    habitat: "Белый Дом, особенно кухня и коридоры"
+    firstMention: "2020-11-03"
+    immunities:
+      - "фактчекинг"
+      - "логика"
+      - "возрастные ограничения"
+    vulnerability: "прямые вопросы без суфлёра, лестницы, время после 18:00"
+    activityTime: "10:00-12:00"
+    size: "1.82 м"
+    weight: "80 кг"
+    recipe:
+      ingredients:
+        - "пыльная Конституция (1 шт.)"
+        - "камера с автосуфлёром (2 шт.)"
+        - "апельсиновый сок (3 мл)"
+      timeMinutes: 2880
+      effectiveness: "нестабильная"
+    source: "Политические архивы v46.7"
+
+  - name: "Ельцин-Медведь"
+    description: "Полумифический правитель эпохи перемен, способный трансформироваться после 18:00. Абсолютная устойчивость к алкоголю."
+    dangerLevel: 8
+    habitat: "Кремль, правительственная дача"
+    firstMention: "1991-12-31"
+    immunities:
+      - "алкоголь"
+      - "критика Запада"
+      - "импичмент"
+    vulnerability: "народные протесты, экономические кризисы"
+    activityTime: "после 18:00"
+    size: "1.88 м"
+    weight: "110 кг"
+    recipe:
+      ingredients:
+        - "водка (1 литр)"
+        - "конституция 1993 года (1 экз.)"
+        - "танцевальный коврик"
+      timeMinutes: 90
+      effectiveness: "непредсказуемая"
+    source: "Архивы эпохи лихих 90-х v9.9"
+
+  - name: "Зе-Трансформер"
+    description: "Политический хамелеон, способный менять амплуа от комика до военного лидера. Черпает силу из народной поддержки."
+    dangerLevel: 7
+    habitat: "Офис президента, студии телеграм-каналов"
+    firstMention: "2019-04-21"
+    immunities:
+      - "троллинг"
+      - "фейки"
+      - "популистские лозунги"
+    vulnerability: "невыполненные обещания"
+    activityTime: "круглосуточно"
+    size: "1.70 м"
+    weight: "70 кг"
+    recipe:
+      ingredients:
+        - "скриншоты из \"Слуги народа\" (10 шт)"
+        - "зеленый свитер (1 шт)"
+        - "военная форма (по ситуации)"
+      timeMinutes: 20
+      effectiveness: "адаптивная"
+    source: "Политические мемы UA 2.0"
+
+  - name: "Панин-Кинолог"
+    description: "Контроверсийный артист, известный эксцентричными методами вживания в роли и нестандартными подходами к дрессуре."
+    dangerLevel: 3
+    habitat: "Киностудии, скандальные ток-шоу"
+    firstMention: "2003-05-17"
+    immunities:
+      - "общественное порицание"
+      - "критика коллег"
+    vulnerability: "судебные иски"
+    activityTime: "после заката"
+    size: "1.78 м"
+    weight: "75 кг"
+    recipe:
+      ingredients:
+        - "спорный сценарий (1 экз.)"
+        - "кинологический справочник (1 шт)"
+        - "желание эпатировать"
+      timeMinutes: 666
+      effectiveness: "скандальная"
+    source: "Андеграунд-хроники Рунета"

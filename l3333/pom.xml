@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>mephi.b22-901</groupId>
+    <artifactId>l3333</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>23</maven.compiler.release>
+        <exec.mainClass>mephi.b22901.l3333.L3333</exec.mainClass>
+    </properties>
+    <dependencies>
+    <!-- Для JSON -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.13.0</version>
+    </dependency>
+    
+    <!-- Для XML -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-xml</artifactId>
+        <version>2.13.0</version>
+    </dependency>
+
+    <!-- Для YAML -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-yaml</artifactId>
+        <version>2.13.0</version>
+    </dependency>
+</dependencies>
+</project>
