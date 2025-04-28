@@ -168,18 +168,22 @@ public class MonsterApp extends JFrame {
         monsterTree.addTreeSelectionListener(e -> {
             DefaultMutableTreeNode node = (DefaultMutableTreeNode) monsterTree.getLastSelectedPathComponent();
 
-            exportButton.setEnabled(node != null && !node.isRoot() && 
-                node.getParent() != null && node.getParent().equals(monsterTree.getModel().getRoot()));
+//            exportButton.setEnabled(node != null && !node.isRoot() && 
+//                node.getParent() != null && node.getParent().equals(monsterTree.getModel().getRoot()));
 
             if (node == null || node.isRoot()) {
                 clearDetailPanel();
+                exportButton.setEnabled(false);
                 return;
             }
 
             if (node.getParent() != null && node.getParent().equals(monsterTree.getModel().getRoot())) {
                 clearDetailPanel();
+                exportButton.setEnabled(true);
                 return;
             }
+            
+            exportButton.setEnabled(false);
 
             String monsterName = node.toString();
             DefaultMutableTreeNode storageNode = (DefaultMutableTreeNode) node.getParent();
