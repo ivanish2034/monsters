@@ -21,7 +21,6 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class MonsterApp extends JFrame {
     private JTree monsterTree;
     private JPanel detailPanel;
-    private JTextArea detailText;
     private JTextField editField;
     private JButton saveButton;
     private JButton exportButton;
@@ -229,7 +228,6 @@ public class MonsterApp extends JFrame {
             DefaultMutableTreeNode storageNode = new DefaultMutableTreeNode(storage.getSourceType());
 
             for (Monster monster : storage.getMonsters()) {
-                // Создаем узел только с именем монстра, без характеристик
                 DefaultMutableTreeNode monsterNode = new DefaultMutableTreeNode(monster.getName());
                 storageNode.add(monsterNode);
             }
@@ -366,7 +364,6 @@ public class MonsterApp extends JFrame {
         infoPanel.add(new JLabel("Источник:"));
         infoPanel.add(new JLabel(monster.getSource()));
 
-        // Рецепт
         Map<String, Object> recipe = monster.getRecipe();
         infoPanel.add(new JLabel("Ингредиенты:"));
         infoPanel.add(new JLabel(recipe.get("ingredients").toString()));
