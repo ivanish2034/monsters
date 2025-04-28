@@ -8,8 +8,7 @@ package mephi.b22901.l3333;
  *
  * @author ivis2
  */
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MonsterStorage {
     private List<Monster> monsters;

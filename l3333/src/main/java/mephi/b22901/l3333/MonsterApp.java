@@ -10,15 +10,13 @@ package mephi.b22901.l3333;
  */
 
 import javax.swing.*;
-import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.*;
 import java.awt.*;
-import java.io.File;
-import java.io.FileFilter;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.tree.DefaultTreeModel;
+
 
 public class MonsterApp extends JFrame {
     private JTree monsterTree;

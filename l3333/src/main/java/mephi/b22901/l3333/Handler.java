@@ -11,7 +11,7 @@ import java.util.List;
  * @author ivis2
  */
 public interface Handler {
-    boolean handleRequest(String fileName, MonsterStorage storage); // импорт
+    boolean handleRequest(String fileName, MonsterStorage storage); 
     void setNextHandler(Handler nextHandler);
-    boolean export(String fileName, List<Monster> monsters); // экспорт
+    boolean export(String fileName, List<Monster> monsters); 
 }

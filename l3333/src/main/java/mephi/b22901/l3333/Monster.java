@@ -8,8 +8,7 @@ package mephi.b22901.l3333;
  *
  * @author ivis2
  */
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Monster {
     private String name;
