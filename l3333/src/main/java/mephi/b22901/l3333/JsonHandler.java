@@ -4,13 +4,14 @@
  */
 package mephi.b22901.l3333;
 
+import com.fasterxml.jackson.databind.*;
+import java.io.*;
+import java.util.List;
+
 /**
  *
  * @author ivis2
  */
-import com.fasterxml.jackson.databind.*;
-import java.io.*;
-import java.util.List;
 
 public class JsonHandler extends BaseHandler {
     private final ObjectMapper mapper;

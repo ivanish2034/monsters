@@ -19,14 +19,14 @@ public abstract class BaseHandler implements Handler {
         this.nextHandler = nextHandler;
     }
 
-    protected boolean passToNext(String fileName, MonsterStorage storage) {
+    public boolean passToNext(String fileName, MonsterStorage storage) {
         if (nextHandler != null) {
             return nextHandler.handleRequest(fileName, storage);
         }
         return false;
     }
 
-    protected boolean passExportToNext(String fileName, List<Monster> monsters) {
+    public boolean passExportToNext(String fileName, List<Monster> monsters) {
         if (nextHandler != null) {
             return nextHandler.export(fileName, monsters);
         }

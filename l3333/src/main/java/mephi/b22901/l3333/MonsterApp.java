@@ -4,11 +4,6 @@
  */
 package mephi.b22901.l3333;
 
-/**
- *
- * @author ivis2
- */
-
 import javax.swing.*;
 import javax.swing.tree.*;
 import java.awt.*;
@@ -16,7 +11,10 @@ import java.io.*;
 import java.util.*;
 import java.util.List;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
+/**
+ *
+ * @author ivis2
+ */
 
 public class MonsterApp extends JFrame {
     private JTree monsterTree;

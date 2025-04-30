@@ -4,16 +4,15 @@
  */
 package mephi.b22901.l3333;
 
+import java.io.File;
+import java.util.*;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.io.IOException;
 /**
  *
  * @author ivis2
  */
-import java.io.File;
-import java.util.List;
-import java.util.Map;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import java.io.IOException;
 
 public class XmlHandler extends BaseHandler {
     private final XmlMapper mapper;

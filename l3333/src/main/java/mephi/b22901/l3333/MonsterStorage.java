@@ -4,11 +4,11 @@
  */
 package mephi.b22901.l3333;
 
+import java.util.*;
 /**
  *
  * @author ivis2
  */
-import java.util.*;
 
 public class MonsterStorage {
     private List<Monster> monsters;
