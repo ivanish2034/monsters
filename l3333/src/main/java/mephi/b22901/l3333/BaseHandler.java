@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 public abstract class BaseHandler implements Handler {
-    protected Handler nextHandler;
+    public Handler nextHandler;
 
     @Override
     public void setNextHandler(Handler nextHandler) {

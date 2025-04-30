@@ -11,18 +11,18 @@ package mephi.b22901.l3333;
 import java.util.*;
 
 public class Monster {
-    private String name;
-    private String description;
-    private int dangerLevel;
-    private String habitat;
-    private String firstMention;
-    private List<String> immunities;
-    private String vulnerability;
-    private String activityTime;
-    private String size;
-    private String weight;
-    private Map<String, Object> recipe;
-    private String source;
+    public String name;
+    public String description;
+    public int dangerLevel;
+    public String habitat;
+    public String firstMention;
+    public List<String> immunities;
+    public String vulnerability;
+    public String activityTime;
+    public String size;
+    public String weight;
+    public Map<String, Object> recipe;
+    public String source;
 
     public String getName() {
         return name;

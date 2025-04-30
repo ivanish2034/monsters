@@ -11,9 +11,9 @@ package mephi.b22901.l3333;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-
 import java.io.*;
 import java.util.*;
+
 public class YamlHandler extends BaseHandler {
     private final ObjectMapper mapper;
 
