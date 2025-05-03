@@ -40,7 +40,7 @@ public class MonsterApp extends JFrame {
     }
 
     private void loadFilesFromProjectDir() {
-        File projectDir = new File(System.getProperty("user.dir"));
+        File appDir = new File(getJarOrProjectDirectory());
 
         FileFilter monsterFilesFilter = file -> {
             String name = file.getName().toLowerCase();
@@ -48,14 +48,15 @@ public class MonsterApp extends JFrame {
                     name.endsWith(".xml") || 
                     name.endsWith(".yaml") || 
                     name.endsWith(".yml")) &&
-                   !name.equals("pom.xml");
+                   !name.equals("pom.xml") &&
+                   !name.equals("dependency-reduced-pom.xml");
         };
 
-        File[] files = projectDir.listFiles(monsterFilesFilter);
+        File[] files = appDir.listFiles(monsterFilesFilter);
 
         if (files != null && files.length > 0) {
             int result = JOptionPane.showConfirmDialog(this, 
-                "Найдены файлы монстров в директории проекта. Загрузить их (" + files.length + " файлов)?",
+                "Найдены файлы монстров в директории приложения. Загрузить их (" + files.length + " файлов)?",
                 "Загрузка файлов", JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE);
 
@@ -80,9 +81,28 @@ public class MonsterApp extends JFrame {
         }
     }
 
+    private String getJarOrProjectDirectory() {
+        try {
+            String path = getClass().getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+            File jarOrClassesDir = new File(path);
+
+            if (jarOrClassesDir.isFile()) {
+                return jarOrClassesDir.getParent();
+            }
+            return System.getProperty("user.dir");
+        } catch (Exception e) {
+            return System.getProperty("user.dir");
+        }
+    }
+    
     private void loadFiles() {
         JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
+        try {
+            String jarPath = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParent();
+            fileChooser.setCurrentDirectory(new File(jarPath));
+        } catch (Exception e) {
+            fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
+        }
         fileChooser.setMultiSelectionEnabled(true);
         fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
 
