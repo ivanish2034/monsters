@@ -163,7 +163,7 @@ public class MonsterApp extends JFrame {
 
         editPanel.add(new JLabel("Редактировать описание:"), BorderLayout.NORTH);
         editField = new JTextField();
-        editField.setBackground(new Color(255, 245, 238)); // Светло-розовый фон для поля редактирования
+        editField.setBackground(new Color(255, 245, 238)); 
         editField.setForeground(Color.RED);
         editPanel.add(editField, BorderLayout.CENTER);
 
@@ -224,20 +224,11 @@ public class MonsterApp extends JFrame {
         saveButton.addActionListener(e -> {
             if (selectedMonster != null) {
                 selectedMonster.setDescription(editField.getText());
-                JOptionPane.showMessageDialog(this, "Описание сохранено для " + selectedMonster.getName() + 
-                    " в формате " + getCurrentStorageType());
+                JOptionPane.showMessageDialog(this, "Описание сохранено для " + selectedMonster.getName());
                 updateTree();
             }
         });
 
-    }
-
-    private String getCurrentStorageType() {
-        DefaultMutableTreeNode node = (DefaultMutableTreeNode) monsterTree.getLastSelectedPathComponent();
-        if (node == null || node.getParent() == null) return "";
-        DefaultMutableTreeNode parent = (DefaultMutableTreeNode) node.getParent();
-        if (parent.equals(monsterTree.getModel().getRoot())) return parent.toString();
-        return "";
     }
     
     private void updateTree() {
@@ -344,9 +335,6 @@ public class MonsterApp extends JFrame {
     private void updateDetailPanel(Monster monster) {
         JPanel infoPanel = (JPanel) ((JScrollPane) detailPanel.getComponent(0)).getViewport().getView();
         infoPanel.removeAll();
-
-        infoPanel.add(new JLabel("Формат:"));
-        infoPanel.add(new JLabel(getCurrentStorageType()));
 
         infoPanel.add(new JLabel("Имя:"));
         infoPanel.add(new JLabel(monster.getName()));
