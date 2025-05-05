@@ -83,13 +83,7 @@ public class MonsterApp extends JFrame {
 
     private String getJarOrProjectDirectory() {
         try {
-            String path = getClass().getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-            File jarOrClassesDir = new File(path);
-
-            if (jarOrClassesDir.isFile()) {
-                return jarOrClassesDir.getParent();
-            }
-            return System.getProperty("user.dir");
+            return new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParent();
         } catch (Exception e) {
             return System.getProperty("user.dir");
         }
